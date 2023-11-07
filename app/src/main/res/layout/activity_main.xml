@@ -45,6 +45,7 @@
             style="@style/EditTextStylePrimary" />
 
         <TextView
+            android:id="@+id/tv_forget_password"
             android:clickable="true"
             android:autoLink="all"
             android:textColor="@color/blue"
@@ -57,6 +58,7 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/bt_sign_in"
             android:text="Sign in"
             style="@style/ButtonBgPrimary"/>
 
@@ -69,6 +71,7 @@
             android:text="Don't have an account?" />
 
         <Button
+            android:id="@+id/bt_create"
             android:text="Create an account"
             style="@style/ButtonBgWhite" />
 

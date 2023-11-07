@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_logo"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:textSize="26dp"
+                android:text="Create your account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:text="Fist name:"
+                style="@style/TextViewStylePrimary" />
+
+            <EditText
+                android:id="@+id/et_firstname"
+                style="@style/EditTextStylePrimary" />
+
+            <TextView
+                android:text="Last name:"
+                style="@style/TextViewStylePrimary" />
+
+            <EditText
+                android:id="@+id/et_lastname"
+                style="@style/EditTextStylePrimary" />
+
+            <TextView
+                android:text="Email:"
+                style="@style/TextViewStylePrimary" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:inputType="textEmailAddress"
+                style="@style/EditTextStylePrimary" />
+
+            <TextView
+                android:text="Password:"
+                style="@style/TextViewStylePrimary"/>
+
+            <EditText
+                android:id="@+id/et_password"
+                android:inputType="textPassword"
+                style="@style/EditTextStylePrimary" />
+
+            <View
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <Button
+                android:text="Create Account"
+                style="@style/ButtonBgPrimary"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
