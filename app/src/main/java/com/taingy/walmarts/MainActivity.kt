@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.taingy.walmarts.model.User
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,10 +33,11 @@ class MainActivity : AppCompatActivity() {
             val email = etEmail.text.toString()
             val password = etPassword.text.toString()
             val isUser = userList.count { user -> user.username == email && user.password == password }
-            if (isUser > 0) {
+            if (isUser == 0) {
                 val intent = Intent(this, ShoppingActivity::class.java)
                 intent.putExtra("username", email)
                 startActivity(intent)
+                finish()
             } else {
                 Toast.makeText(this, "Invalid username or password!", Toast.LENGTH_LONG).show()
             }

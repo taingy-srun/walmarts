@@ -1,5 +1,6 @@
 package com.taingy.walmarts
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
@@ -21,7 +22,7 @@ class ShoppingActivity : AppCompatActivity() {
         val layoutFood = findViewById<LinearLayout>(R.id.layout_food)
 
         layoutElectronic.setOnClickListener {
-            Toast.makeText(this, "You have chosen the Electronic category of shopping.", Toast.LENGTH_LONG).show()
+            startActivity(Intent(this, ProductListActivity::class.java))
         }
         layoutClothing.setOnClickListener {
             Toast.makeText(this, "You have chosen the Clothing category of shopping.", Toast.LENGTH_LONG).show()

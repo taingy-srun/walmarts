@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Walmarts"
         tools:targetApi="31">
         <activity
+            android:name=".CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductListActivity"
+            android:exported="false" />
+        <activity
             android:name=".ShoppingActivity"
             android:exported="false" />
         <activity
