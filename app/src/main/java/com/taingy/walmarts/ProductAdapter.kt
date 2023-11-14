@@ -12,7 +12,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.taingy.walmarts.model.Product
 
-class ProductAdapter(val context: Context, private val dataSet: List<Product>, val isCartView: Boolean) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
+class ProductAdapter(private val context: Context, private val products: List<Product>, private val isCartView: Boolean) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
@@ -23,30 +23,30 @@ class ProductAdapter(val context: Context, private val dataSet: List<Product>, v
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
 
-        viewHolder.title.text = dataSet[position].productName
-        viewHolder.description.text = dataSet[position].productDescription
-        viewHolder.price.text = "$${dataSet[position].cost}"
-        viewHolder.image.setImageDrawable(context.getDrawable(dataSet[position].image))
+        viewHolder.title.text = products[position].productName
+        viewHolder.description.text = products[position].productDescription
+        viewHolder.price.text = "$${products[position].cost}"
+        viewHolder.image.setImageDrawable(context.getDrawable(products[position].image))
 
         if (isCartView)
             viewHolder.btAdd.visibility = View.GONE
 
         viewHolder.btAdd.setOnClickListener {
-            ProductListActivity.productsInCart.add(dataSet[position])
+            ProductListActivity.productsInCart.add(products[position])
             Toast.makeText(context, "Added to cart!", Toast.LENGTH_LONG).show()
         }
 
         viewHolder.itemView.setOnClickListener {
             val intent = Intent(context, ProductDetailActivity::class.java)
-            intent.putExtra("name", dataSet[position].productName)
-            intent.putExtra("description", dataSet[position].productDescription)
-            intent.putExtra("price", dataSet[position].cost)
-            intent.putExtra("image", dataSet[position].image)
+            intent.putExtra("name", products[position].productName)
+            intent.putExtra("description", products[position].productDescription)
+            intent.putExtra("price", products[position].cost)
+            intent.putExtra("image", products[position].image)
             context.startActivity(intent)
         }
     }
 
-    override fun getItemCount() = dataSet.size
+    override fun getItemCount() = products.size
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val title: TextView

@@ -3,21 +3,25 @@ package com.taingy.walmarts
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.taingy.walmarts.model.Product
+import com.taingy.walmarts.databinding.ActivityCartBinding
 
 class CartActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityCartBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cart)
+        binding = ActivityCartBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
+        getProductList()
+
+    }
+
+    private fun getProductList() {
         val products = ProductListActivity.productsInCart
-
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         val layoutManager = LinearLayoutManager(this)
-        recyclerView.layoutManager = layoutManager
+        binding.recyclerView.layoutManager = layoutManager
         val productAdapter = ProductAdapter(this, products, true)
-        recyclerView.adapter = productAdapter
-
+        binding.recyclerView.adapter = productAdapter
     }
 }

@@ -17,7 +17,7 @@
     </androidx.recyclerview.widget.RecyclerView>
 
     <Button
-        android:id="@+id/bt_view_cart"
+        android:id="@+id/btViewCart"
         android:layout_margin="8dp"
         android:layout_alignParentBottom="true"
         android:text="View Cart"

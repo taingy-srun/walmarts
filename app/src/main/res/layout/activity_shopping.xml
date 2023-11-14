@@ -13,7 +13,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/tv_welcome"
+            android:id="@+id/tvWelcome"
             android:layout_gravity="right"
             android:text="Welcome: "
             android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
             android:layout_height="200dp">
 
             <LinearLayout
-                android:id="@+id/layout_electronic"
+                android:id="@+id/layoutElectronic"
                 android:orientation="vertical"
                 android:layout_weight="1"
                 android:padding="16dp"
@@ -56,7 +56,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/layout_clothing"
+                android:id="@+id/layoutClothing"
                 android:orientation="vertical"
                 android:layout_weight="1"
                 android:padding="16dp"
@@ -86,7 +86,7 @@
             android:layout_height="200dp">
 
             <LinearLayout
-                android:id="@+id/layout_beauty"
+                android:id="@+id/layoutBeauty"
                 android:orientation="vertical"
                 android:layout_weight="1"
                 android:padding="16dp"
@@ -107,7 +107,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/layout_food"
+                android:id="@+id/layoutFood"
                 android:orientation="vertical"
                 android:layout_weight="1"
                 android:padding="16dp"
